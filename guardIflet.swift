@@ -25,3 +25,24 @@ func tripleNumber(number: Int?) {
 
 // Calling Function
 tripleNumber(number: optionalNumber)
+
+// Force Unwrapping
+
+let forcedNumber = optionalNumber!
+
+// Optional Chaining
+
+struct Device {
+    var type: String
+    var price: Float
+    var color: String
+}
+
+var myPhone: Device?
+myPhone = Device(type: "Phone", price: 699, color: "Space Grey")
+
+let devicePrice = myPhone?.price
+
+if let devicePrice = devicePrice{
+    print("My total price = \(devicePrice + 8.99)")
+}
